@@ -1,7 +1,8 @@
+import axios from 'axios';
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
-import { getCards } from "../../actions/cardsActions";
+import { getCards, deleteCard } from "../../actions/cardsActions";
 import CardsTable from '../../components/UI/cards-table/CardsTable'
 import './Cards.css'
 
@@ -14,6 +15,11 @@ const Cards = () => {
   useEffect(() => {
     dispatch(getCards());
   }, [dispatch]);
+
+ const delCard = (id) => {
+   deleteCard(id);
+   getCards();
+  }
     return (
         <div class="main">
         <div class="container">
@@ -37,7 +43,7 @@ const Cards = () => {
                
               />
             </div> */}
-            <CardsTable cards={cards}/>
+            <CardsTable cards={cards} delCard={delCard}/>
           </div>
         </div>
       </div>
@@ -48,4 +54,4 @@ const Cards = () => {
 const mapStateToProps = (state) => ({
   cards: state.cards,
 });
-export default connect(mapStateToProps, { getCards })(Cards);
+export default connect(mapStateToProps, { getCards, deleteCard })(Cards);

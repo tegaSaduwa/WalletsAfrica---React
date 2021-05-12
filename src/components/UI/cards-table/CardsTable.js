@@ -1,13 +1,12 @@
 import React from "react";
-import CardsModal from "../modals/cards-modal/CardsModal";
 import "./CardsTable.css";
 
-const CardsTable = ({ cards }) => {
+const CardsTable = ({ cards, delCard }) => {
   return (
     <div>
       <div className="container  mt-3" >
         <table className="table main-table" id="tableId">
-          {cards?.cards.map(({ cardBalance, cvv }, index) => (
+          {cards?.cards.map(({ cardBalance, cvv, expiryMonth}, index) => (
             <tr key={index}>
               <td>
                 <div className="table-card">
@@ -16,7 +15,7 @@ const CardsTable = ({ cards }) => {
                     <p>
                       <span className="card-bottom-num pr-4">{cvv}</span>
                       <img
-                        src="../../../../assets/images/verve_logo.png"
+                        src="/assets/images/verve_logo.png"
                         alt="cadTypeLogo"
                         className="card-image"
                       />
@@ -24,7 +23,9 @@ const CardsTable = ({ cards }) => {
                   </div>
                 </div>
                 <span>
-               <CardsModal />
+                  <small className="card-view-details" data-toggle="modal">
+                    View Details
+                  </small>
                 </span>
               </td>
 
@@ -38,7 +39,7 @@ const CardsTable = ({ cards }) => {
                 </button>{" "}
               </td>
               <td class="freeze-card">Freeze Card</td>
-              <td class="delete-card">Delete Card</td>
+              <td class="delete-card" onClick={delCard.bind(this, expiryMonth)}>Delete Card</td>
               <td   style={{ color: "white" }}>..........................................................................................</td>
               <td   style={{ color: "white" }}>..........................................................................................</td>
               <td></td>
