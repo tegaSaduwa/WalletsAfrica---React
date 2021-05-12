@@ -30,20 +30,6 @@ const Cards = () => {
               <button class="btn btn-sm card-side-btn mr-2">New Physical Card</button>
               <button class="btn btn-sm card-side-btn">New Virtual Card</button>
             </div>
-      
-            {/* <div class="container cards-nav">
-              <span class="vir-cards">Virtual Cards</span>
-              <span class="physical-cards">Physical Cards</span>
-            </div> */}
-            {/* <div class="form-group col-2 text-left  ml-2">
-              <input
-                type="search"
-                class="form-control form-control-sm"
-                placeholder="Search"
-                name="search"
-               
-              />
-            </div> */}
             <CardsTable cards={cards} delCard={delCard}/>
           </div>
         </div>
