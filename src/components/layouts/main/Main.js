@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Cards from "../../pages/cards/Cards";
-import Home from "../../pages/home/Home";
+import Cards from "../../../pages/cards/Cards";
+import Home from "../../../pages/home/Home";
 import Navbar from "../navbar/Navbar";
 import "./Main.css";
 

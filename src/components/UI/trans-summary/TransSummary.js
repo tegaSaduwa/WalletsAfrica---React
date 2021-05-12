@@ -9,15 +9,15 @@ const TransSummary = ({allTransactions}) => {
   <div class="row p-4 my-3">
     <div class="col-4 column">
       <p>Transactions</p>
-      <h1> {allTransactions.allTransactions.length}</h1>
+      <h1> {allTransactions?.allTransactions?.length}</h1>
     </div>
     <div class="col-4 column">
       <p>Amount Spent</p>
-      <h1>{allTransactions.allTransactions[9].amount}</h1>
+      <h1>{allTransactions?.allTransactions[9]?.amount}</h1>
     </div>
     <div class="col-4 column">
       <p>Amount Received</p>
-      <h1>{allTransactions.allTransactions[0].amount}</h1>
+      <h1>{allTransactions?.allTransactions[0]?.amount}</h1>
     </div>
   </div>
 </div>

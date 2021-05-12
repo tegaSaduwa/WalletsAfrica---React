@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import BalanceCard from "../../UI/balance-card/BalanceCard";
-import DashboardTable from "../../UI/dashboard-table/DashboardTable";
-import TransSummary from "../../UI/trans-summary/TransSummary";
+import BalanceCard from "../../components/UI/balance-card/BalanceCard";
+import DashboardTable from "../../components/UI/dashboard-table/DashboardTable";
+import TransSummary from "../../components/UI/trans-summary/TransSummary";
 import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
-import { getTransactions } from "../../../actions/allTransactionsActions";
+import { getTransactions } from "../../actions/allTransactionsActions";
 
 const Home = () => {
   const allTransactions = useSelector((state) => state.allTransactions);
@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getTransactions());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div class="main">

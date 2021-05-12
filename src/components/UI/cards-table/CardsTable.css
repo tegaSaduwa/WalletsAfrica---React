@@ -1,69 +1,87 @@
-.table .main-table .c {
-    border-spacing: 10px;
-    border-collapse: separate;
-    padding: 0;
-  }
-  
-  .table-card {
-    width: 120px;
-    height: 80px;
-    background: linear-gradient(
-      128.39deg,
-      rgba(0, 0, 0, 0.6) -29.7%,
-      #000000 16.11%
-    );
-    border-radius: 6px;
-    padding: 10px 10px 20px 10px;
-    line-height: 3em;
-    color: #ffffff;
-    font-family: "Courier New", Courier, monospace;
-  }
-  .card-td {
-      margin: 0;
-      padding: 0;
-  }
-  
-  .table-card .card-top-num {
-    font-size: 14px;
-    line-height: 15px;
-    text-align: right;
-  }
-  
-  .table-card .card-bottom-num {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    margin-right: 25px;
-    padding-bottom: 10px;
-  }
-  
-  .fund-card-btn {
-    margin-top: 20px;
-    color: #ffffff;
-    width: 100px;
-    height: 40px;
-    background: #5c2799;
-    border-radius: 4px;
-    font-size: 12px;
-  }
-  
-  .freeze-card {
-    padding-top: 40px;
-    color: #5c2799;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  
-  .delete-card {
-    padding-top: 40px;
-    color: #e4445d;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  .card-view-details {
-      font-size: 12px;
-      color: #5c2799;
-      cursor: pointer;
-  }
-  
+
+#tableId {
+  border-collapse: collapse !important;
+  /* width:500px;
+  margin-top: 100px; */
+}
+#tableId td {
+  padding: 0;
+  margin: 0;
+}
+.main-table td {
+  margin: 0;
+}
+
+.table-card {
+  height: 80px;
+  background: linear-gradient(
+    128.39deg,
+    rgba(0, 0, 0, 0.6) -29.7%,
+    #000000 16.11%
+  );
+  width: 150px;
+  /* margin-left:40px; */
+  padding: 20px;
+  border-radius: 6px;
+  padding: 10px 10px 20px 10px;
+  line-height: 3em;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+}
+.card-td {
+  margin: 0;
+  padding: 0;
+}
+
+.table-card .card-top-num {
+  font-size: 14px;
+  line-height: 15px;
+  text-align: right;
+}
+
+.table-card .card-bottom-num {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 25px;
+  padding-bottom: 10px;
+}
+
+.fund-card-btn {
+  margin-top: 20px;
+  color: #ffffff;
+
+  background: #5c2799;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.fund-card-btn:hover {
+  color: plum;
+ 
+}
+
+.freeze-card {
+  padding-top: 40px;
+  color: #5c2799;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-card {
+  padding-top: 40px;
+  color: #e4445d;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 200px;
+}
+
+.delete-card:hover, .card-view-details:hover, .freeze-card:hover {
+ text-decoration: underline;
+}
+.card-view-details {
+  font-size: 12px;
+  color: #5c2799;
+  cursor: pointer;
+}
