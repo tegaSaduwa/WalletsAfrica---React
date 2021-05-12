@@ -1,0 +1,44 @@
+.dashboard-table {
+  overflow-y: scroll;
+  margin-left: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.07);
+  height: 300px;
+}
+
+.tableheader-text {
+  color: #5c2799;
+  font-size: 0.8em;
+}
+
+.tableheader-btn {
+  float: right;
+  overflow: hidden;
+  padding: 4px;
+  font-size: 11px;
+  margin: 10px 10px 10px 0;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #011627;
+  cursor: pointer;
+}
+
+.table,
+.table thead th {
+  font-size: 12px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.table thead th {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+td{
+  border-color: rgba(0, 0, 0, 0.25);
+}
