@@ -18,6 +18,7 @@ const Cards = () => {
 
  const delCard = (id) => {
    deleteCard(id);
+   console.log("clicked")
    getCards();
   }
     return (
